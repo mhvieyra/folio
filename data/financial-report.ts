@@ -50,7 +50,7 @@ export const currentReport: FinancialReport = {
 
   costOfRevenue: {
     infrastructure: 12,       // Hosting, servers, etc
-    paymentProcessing: 2,     // Stripe fees, payment gateway
+    paymentProcessing: 7.38,     // Stripe fees, payment gateway
   },
 
   operatingExpenses: {
