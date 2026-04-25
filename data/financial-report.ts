@@ -2,35 +2,37 @@ export interface FinancialReport {
   period: string;
   currency: string;
   reportDate: string;
-  
+
   // Revenue
   revenue: {
     subscriptions: number;
     oneTimePurchases: number;
     donations: number;
   };
-  
+
   // Cost of Revenue
   costOfRevenue: {
     infrastructure: number;
     paymentProcessing: number;
   };
-  
+
   // Operating Expenses
   operatingExpenses: {
     productDevelopment: number;
     marketingAcquisition: number;
     operationsTools: number;
   };
-  
+
   // Key Metrics
   keyMetrics: {
     mrr: number;
-    activeSubscribers: number;
-    churnRate: number;
-    momGrowth: number;
+    registeredUsers: number;
+    unregisteredUsers: number;
+    userGrowthRate: number; // registered users growth Jan -> Mar (%)
+    churnRate: number | null;
+    momGrowth: number | null;
   };
-  
+
   // Cumulative
   cumulativeRevenue: number;
 }
@@ -39,30 +41,30 @@ export const currentReport: FinancialReport = {
   period: "Three Months Ended March 31, 2025",
   currency: "USD",
   reportDate: "Q1 2025",
-  
+
   revenue: {
-    subscriptions: 4500,      // MRR x months
-    oneTimePurchases: 850,
-    donations: 200,
+    subscriptions: 0,
+    oneTimePurchases: 0,
+    donations: 240,
   },
-  
+
   costOfRevenue: {
-    infrastructure: 600,       // Hosting, servers, etc
-    paymentProcessing: 280,    // Stripe fees, payment gateway
+    infrastructure: 12,       // Hosting, servers, etc
+    paymentProcessing: 2,     // Stripe fees, payment gateway
   },
-  
+
   operatingExpenses: {
-    productDevelopment: 2800,
-    marketingAcquisition: 600,
-    operationsTools: 400,
+    productDevelopment: 60,
+    marketingAcquisition: 0,
+    operationsTools: 76,
   },
-  
+
   keyMetrics: {
-    mrr: 1500,                // Monthly recurring revenue
-    activeSubscribers: 450,
-    churnRate: 2.5,           // percentage
-    momGrowth: 12.3,          // percentage
+    mrr: 0,
+    activeSubscribers: 0,
+    churnRate: 0,
+    momGrowth: 375,           // De 4 usuarios en enero a 19 en marzo
   },
-  
-  cumulativeRevenue: 18750,   // Histórico desde el inicio
+
+  cumulativeRevenue: 240,
 };
