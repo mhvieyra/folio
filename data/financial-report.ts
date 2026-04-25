@@ -45,7 +45,7 @@ export const currentReport: FinancialReport = {
   revenue: {
     subscriptions: 0,
     oneTimePurchases: 0,
-    donations: 240,
+    donations: 242.63,
   },
 
   costOfRevenue: {
@@ -66,5 +66,5 @@ export const currentReport: FinancialReport = {
     momGrowth: 375,           // De 4 usuarios en enero a 19 en marzo
   },
 
-  cumulativeRevenue: 240,
+  cumulativeRevenue: 242.63,
 };
