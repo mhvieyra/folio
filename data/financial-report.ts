@@ -38,9 +38,9 @@ export interface FinancialReport {
 }
 
 export const currentReport: FinancialReport = {
-  period: "Three Months Ended March 31, 2025",
+  period: "Three Months Ended March 31, 2026",
   currency: "USD",
-  reportDate: "Q1 2025",
+  reportDate: "Q1 2026",
 
   revenue: {
     subscriptions: 0,
