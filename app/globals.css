@@ -124,3 +124,18 @@
     @apply bg-background text-foreground;
   }
 }
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #folio-print-area,
+  #folio-print-area * {
+    visibility: visible;
+  }
+  #folio-print-area {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+  }
+}
