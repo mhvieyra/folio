@@ -1,6 +1,5 @@
-import FinancialReportComponent from '@/components/FinancialReport';
-import { currentReport } from '@/data/financial-report';
+import { Dashboard } from '@/components/report/Dashboard'
 
 export default function Home() {
-  return <FinancialReportComponent data={currentReport} />;
+  return <Dashboard />
 }
